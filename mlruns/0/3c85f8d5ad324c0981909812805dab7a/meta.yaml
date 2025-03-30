@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/KIDNEY-DISEASE-PROJECT/mlruns/0/3c85f8d5ad324c0981909812805dab7a/artifacts
+end_time: 1743234309246
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3c85f8d5ad324c0981909812805dab7a
+run_name: enchanting-snail-588
+run_uuid: 3c85f8d5ad324c0981909812805dab7a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743234295663
+status: 4
+tags: []
+user_id: KAUSHIK

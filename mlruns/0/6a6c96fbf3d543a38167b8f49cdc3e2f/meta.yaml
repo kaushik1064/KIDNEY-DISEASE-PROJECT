@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/KIDNEY-DISEASE-PROJECT/mlruns/0/6a6c96fbf3d543a38167b8f49cdc3e2f/artifacts
+end_time: 1743233477511
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6a6c96fbf3d543a38167b8f49cdc3e2f
+run_name: agreeable-shrimp-426
+run_uuid: 6a6c96fbf3d543a38167b8f49cdc3e2f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743233459105
+status: 4
+tags: []
+user_id: KAUSHIK

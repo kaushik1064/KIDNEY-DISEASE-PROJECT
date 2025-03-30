@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/KIDNEY-DISEASE-PROJECT/mlruns/0/386e6f3fa91e4042952e84e74fd67692/artifacts
+end_time: 1743311993329
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 386e6f3fa91e4042952e84e74fd67692
+run_name: honorable-bug-774
+run_uuid: 386e6f3fa91e4042952e84e74fd67692
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743311980143
+status: 3
+tags: []
+user_id: KAUSHIK

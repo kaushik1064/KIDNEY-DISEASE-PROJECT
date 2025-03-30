@@ -70,3 +70,162 @@ x==========x]
 [2025-03-28 15:19:35,591: INFO: common: json file saved at: scores.json]
 [2025-03-28 15:19:38,898: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
 [2025-03-28 15:19:39,485: INFO: builder_impl: Assets written to: C:\Users\KAUSHIK\AppData\Local\Temp\tmp1629axe6\model\data\model\assets]
+[2025-03-29 12:30:25,372: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-03-29 12:30:25,376: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 12:30:25,379: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 12:30:25,380: INFO: common: created directory at: artifacts]
+[2025-03-29 12:30:25,381: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-29 12:30:25,381: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1h_lpshuI-xw8zx5SQgy008e4ZeLzCZYl/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-29 12:34:04,841: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1h_lpshuI-xw8zx5SQgy008e4ZeLzCZYl/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-03-29 12:34:16,296: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-03-29 12:34:47,451: INFO: stage_02_base_modle: *******************]
+[2025-03-29 12:34:47,451: INFO: stage_02_base_modle: >>>>>> stage Base Model started <<<<<<]
+[2025-03-29 12:34:47,453: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 12:34:47,457: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 12:34:47,458: INFO: common: created directory at: artifacts]
+[2025-03-29 12:34:47,458: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-03-29 12:34:48,118: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-29 12:34:48,454: INFO: stage_02_base_modle: >>>>>> stage Base Model completed <<<<<<
+
+x==========x]
+[2025-03-29 12:34:58,417: INFO: stage_03_model_training: *******************]
+[2025-03-29 12:34:58,417: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-03-29 12:34:58,419: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 12:34:58,421: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 12:34:58,421: INFO: common: created directory at: artifacts]
+[2025-03-29 12:34:58,421: ERROR: stage_03_model_training: name 'os' is not defined]
+Traceback (most recent call last):
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_03_model_training.py", line 25, in <module>
+    obj.main()
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_03_model_training.py", line 14, in main
+    training_config = config.get_training_config()
+  File "d:\kidney-disease-project\src\cnnClassifier\config\configuration.py", line 56, in get_training_config
+    training_data = os.path.join(self.config.data_ingestion.unzip_dir)
+NameError: name 'os' is not defined
+[2025-03-29 12:40:28,580: INFO: stage_03_model_training: *******************]
+[2025-03-29 12:40:28,582: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-03-29 12:40:28,584: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 12:40:28,585: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 12:40:28,585: INFO: common: created directory at: artifacts]
+[2025-03-29 12:40:28,585: INFO: common: created directory at: artifacts\training]
+[2025-03-29 12:56:11,529: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-03-29 12:56:28,562: INFO: stage_04_model_evaluation_mlflow: *******************]
+[2025-03-29 12:56:28,562: INFO: stage_04_model_evaluation_mlflow: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-03-29 12:56:28,565: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 12:56:28,568: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 12:56:28,569: INFO: common: created directory at: artifacts]
+[2025-03-29 13:00:57,631: INFO: common: json file saved at: scores.json]
+[2025-03-29 13:01:00,949: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-29 13:01:01,603: INFO: builder_impl: Assets written to: C:\Users\KAUSHIK\AppData\Local\Temp\tmpk79tmwjy\model\data\model\assets]
+[2025-03-29 13:01:17,512: ERROR: stage_04_model_evaluation_mlflow: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 23, in <module>
+    obj.main()
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "d:\kidney-disease-project\src\cnnClassifier\components\evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-03-29 13:10:44,884: INFO: stage_04_model_evaluation_mlflow: *******************]
+[2025-03-29 13:10:44,885: INFO: stage_04_model_evaluation_mlflow: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-03-29 13:10:44,887: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-29 13:10:44,890: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-29 13:10:44,891: INFO: common: created directory at: artifacts]
+[2025-03-29 13:14:54,828: INFO: common: json file saved at: scores.json]
+[2025-03-29 13:14:56,765: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-29 13:14:57,330: INFO: builder_impl: Assets written to: C:\Users\KAUSHIK\AppData\Local\Temp\tmpjpthiq7i\model\data\model\assets]
+[2025-03-29 13:15:09,247: ERROR: stage_04_model_evaluation_mlflow: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 23, in <module>
+    obj.main()
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "d:\kidney-disease-project\src\cnnClassifier\components\evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-03-30 10:32:23,814: INFO: stage_04_model_evaluation_mlflow: *******************]
+[2025-03-30 10:32:23,814: INFO: stage_04_model_evaluation_mlflow: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-03-30 10:32:23,814: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-30 10:32:23,814: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-30 10:32:23,814: INFO: common: created directory at: artifacts]
+[2025-03-30 10:35:53,235: INFO: common: json file saved at: scores.json]
+[2025-03-30 10:35:55,210: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-30 10:35:55,711: INFO: builder_impl: Assets written to: C:\Users\KAUSHIK\AppData\Local\Temp\tmpj_dv9_3s\model\data\model\assets]
+[2025-03-30 10:36:07,297: ERROR: stage_04_model_evaluation_mlflow: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 23, in <module>
+    obj.main()
+  File "D:\KIDNEY-DISEASE-PROJECT\src\cnnClassifier\pipeline\stage_04_model_evaluation_mlflow.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "d:\kidney-disease-project\src\cnnClassifier\components\evaluation_mlflow.py", line 72, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\KAUSHIK\anaconda3\envs\kidney\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-03-30 10:46:18,950: INFO: stage_04_model_evaluation_mlflow: *******************]
+[2025-03-30 10:46:18,952: INFO: stage_04_model_evaluation_mlflow: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-03-30 10:46:18,953: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-30 10:46:18,956: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-30 10:46:18,957: INFO: common: created directory at: artifacts]
+[2025-03-30 10:49:39,780: INFO: common: json file saved at: scores.json]
+[2025-03-30 10:49:41,246: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-03-30 10:49:41,740: INFO: builder_impl: Assets written to: C:\Users\KAUSHIK\AppData\Local\Temp\tmppeex141c\model\data\model\assets]
+[2025-03-30 10:49:53,330: INFO: stage_04_model_evaluation_mlflow: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]

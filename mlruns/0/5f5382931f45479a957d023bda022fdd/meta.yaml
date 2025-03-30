@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/KIDNEY-DISEASE-PROJECT/mlruns/0/5f5382931f45479a957d023bda022fdd/artifacts
+end_time: 1743311167295
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5f5382931f45479a957d023bda022fdd
+run_name: upset-crane-862
+run_uuid: 5f5382931f45479a957d023bda022fdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743311154241
+status: 4
+tags: []
+user_id: KAUSHIK
